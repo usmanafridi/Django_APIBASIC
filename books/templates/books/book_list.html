@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Book Lidt</title>
+</head>
+<body>
+
+<h1>All books</h1>
+{% for book in object_list %}
+<ul>
+<li>ID: {{ book.id }}</li>
+<li>Title: {{ book.title }}</li>
+<li>Subtitle: {{ book.subtitle }}</li>
+<li>Author: {{ book.author }}</li>
+<li>ISBN: {{ book.isbn }}</li>
+</ul>
+
+{% empty %}
+
+<h2>No list of books is there</h2>
+{% endfor %}
+
+
+
+</body>
+</html>
